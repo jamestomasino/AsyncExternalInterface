@@ -37,11 +37,7 @@ package org.tomasino.external
 				try
 				{
 					// Test if CallStack class exists
-<<<<<<< HEAD
-					ExternalInterface.call( 'CallStack.getInst();');
-=======
 					ExternalInterface.call( 'CallStack');
->>>>>>> Updated code to reference the instance instead of Class
 				}
 				catch (e:Error)
 				{
