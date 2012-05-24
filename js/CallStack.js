@@ -50,5 +50,5 @@
 		clearInterval(p.interval);
 	}
 
-window.CallStack = CallStack;
+window.CallStack = CallStack.getInst();
 }(window));

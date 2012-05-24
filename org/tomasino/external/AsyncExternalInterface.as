@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package org.tomasino.external
+=======
+﻿package org.tomasino.external
+>>>>>>> Updated code to reference the instance instead of Class
 {
 	import flash.external.ExternalInterface;
 	import flash.system.Capabilities;
@@ -37,7 +41,11 @@ package org.tomasino.external
 				try
 				{
 					// Test if CallStack class exists
+<<<<<<< HEAD
 					ExternalInterface.call( 'CallStack.getInst();');
+=======
+					ExternalInterface.call( 'CallStack');
+>>>>>>> Updated code to reference the instance instead of Class
 				}
 				catch (e:Error)
 				{
@@ -63,7 +71,11 @@ package org.tomasino.external
 
 				if (_isCallStackAvailable)
 				{
+<<<<<<< HEAD
 					ExternalInterface.call ( 'CallStack.getInst().addCall', functionName, params);
+=======
+					ExternalInterface.call ( 'CallStack.addCall', functionName, params);
+>>>>>>> Updated code to reference the instance instead of Class
 				}
 				else
 				{
@@ -79,3 +91,7 @@ package org.tomasino.external
 		}
 	}
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Updated code to reference the instance instead of Class
