@@ -1,4 +1,4 @@
-﻿package org.tomasino.external
+package org.tomasino.external
 {
 	import flash.external.ExternalInterface;
 	import flash.system.Capabilities;
