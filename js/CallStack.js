@@ -2,7 +2,7 @@
 {
     function CallStack() {}
 
-	CallStack.INTERVAL_TIME = 1000;
+	CallStack.INTERVAL_TIME = 500;
 
 	CallStack.getInst = function()
 	{
@@ -34,6 +34,12 @@
 		p.interval = setInterval(p.runStack, CallStack.INTERVAL_TIME);
 	}
 
+	p.runAll = function ()
+	{
+		clearInterval(p.interval);
+		while (p.stack.length) p.runStack();
+	}
+
 	p.runStack = function()
 	{
 		var call = p.stack.shift();
@@ -50,5 +56,12 @@
 		clearInterval(p.interval);
 	}
 
-window.CallStack = CallStack.getInst();
+	window.CallStack = CallStack.getInst();
+
+	if(window.addEventListener)
+		window.addEventListener('unload', window.CallStack.runAll, false);
+	if(window.attachEvent)
+		window.attachEvent('onunload', window.CallStack.runAll);
+
 }(window));
+
